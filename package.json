@@ -1,0 +1,26 @@
+{
+  "name": "reviews-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samosas-SDC/reviews-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samosas-SDC/reviews-api/issues"
+  },
+  "homepage": "https://github.com/Samosas-SDC/reviews-api#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "k6": "^0.0.0",
+    "pg": "^8.7.3"
+  }
+}

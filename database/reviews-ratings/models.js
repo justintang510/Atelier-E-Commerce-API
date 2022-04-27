@@ -128,16 +128,7 @@ module.exports = {
     `;
     let values = [product_id]
     return db.query(query, values)
-      .then((data) => {
-        data = data.rows[0].data;
-        let returnObject = {
-          product_id: data.product_id,
-          ratings: data.ratings,
-          recommend: data.recommend,
-          characteristics: data.characteristics,
-        }
-        return returnObject
-      })
+      .then(data => data.rows[0].data)
       .catch(err => console.log(err))
   },
 

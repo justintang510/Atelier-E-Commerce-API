@@ -42,7 +42,10 @@ CREATE TABLE IF NOT EXISTS characteristic_reviews (
   value INTEGER NOT NULL DEFAULT NULL,
   CONSTRAINT fk_characteristic_reviews_characteristic
     FOREIGN KEY (characteristic_id)
-      REFERENCES characteristics (id)
+      REFERENCES characteristics (id),
+  CONSTRAINT fk_characteristic_reviews_review
+    FOREIGN KEY (review_id)
+      REFERENCES review (id)
 );
 
 -- DELETE INDEXES

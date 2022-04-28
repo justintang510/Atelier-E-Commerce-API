@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS characteristic_reviews (
       REFERENCES characteristics (id),
   CONSTRAINT fk_characteristic_reviews_review
     FOREIGN KEY (review_id)
-      REFERENCES review (id)
+      REFERENCES reviews (id)
 );
 
 -- DELETE INDEXES
@@ -76,8 +76,8 @@ SELECT SETVAL(
     (SELECT (MAX("id") + 1) FROM "characteristics"),
     FALSE);
 SELECT SETVAL(
-    (SELECT PG_GET_SERIAL_SEQUENCE('characteristics_reviews', 'id')),
-    (SELECT (MAX("id") + 1) FROM "characteristics_reviews"),
+    (SELECT PG_GET_SERIAL_SEQUENCE('characteristic_reviews', 'id')),
+    (SELECT (MAX("id") + 1) FROM "characteristic_reviews"),
     FALSE);
 
 -- psql -h localhost -U postgres -d reviewsdb -f ../hackreactor/reviews-api/database/reviews-ratings/schema.sql

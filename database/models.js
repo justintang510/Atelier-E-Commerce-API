@@ -14,12 +14,13 @@ module.exports = {
       SELECT
         r.id AS review_id, r.rating, r.summary, r.recommend, r.response, r.body, r.date, r.reviewer_name, r.helpfulness,
         (SELECT array_to_json(COALESCE(array_agg(photo), array[]::record[]))
-          FROM (SELECT rp.id,rp.url FROM reviews_photos rp WHERE rp.review_id = r.id) photo) AS photos
+          FROM (SELECT rp.id,rp.url FROM reviews_photos rp WHERE rp.review_id = r.id) photo
+        ) AS photos
       FROM reviews r
       WHERE product_id = ${product_id}
       ORDER BY ${sort} DESC
       LIMIT ${count}
-      OFFSET ${count * (page - 1)}
+      OFFSET ${count * (page - 1)};
     `;
     return db.query(query)
       .then(data => {
@@ -31,7 +32,7 @@ module.exports = {
         }
         return returnObject
       })
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
   addReview: ({ product_id, rating, summary, body, recommend, name, email }) => {
@@ -43,7 +44,7 @@ module.exports = {
     let values = [product_id, rating, summary, body, recommend, name, email]
     return db.query(query, values)
       .then(data => data.rows[0])
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
   addPhotos: (review_id, photos) => {
@@ -58,7 +59,7 @@ module.exports = {
       photos
     ]
     return db.query(query, values)
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
   addCharacteristics: (review_id, characteristics) => {
@@ -74,7 +75,7 @@ module.exports = {
       Object.values(characteristics)
     ]
     return db.query(query, values)
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
   markAsHelpful: ({ review_id }) => {
@@ -85,7 +86,7 @@ module.exports = {
     `;
     let values = [review_id]
     return db.query(query, values)
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
   markAsReported: ({ review_id }) => {
@@ -96,7 +97,7 @@ module.exports = {
     `;
     let values = [review_id]
     return db.query(query, values)
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
   getMetadata: ({ product_id }) => {
@@ -124,12 +125,12 @@ module.exports = {
         )
       ) as data
       FROM reviews
-      WHERE product_id = $1
+      WHERE product_id = $1;
     `;
     let values = [product_id]
     return db.query(query, values)
       .then(data => data.rows[0].data)
-      .catch(err => console.log(err))
+      .catch(err => err)
   },
 
 }

@@ -1,7 +1,6 @@
 require('dotenv').config();
 const { Pool } = require('pg');
 
-
 const db = new Pool({
   user: 'postgres',
   host: process.env.HOST,
@@ -9,7 +8,6 @@ const db = new Pool({
   password: process.env.PASSWORD,
   port: process.env.PORT
 });
-
 
 db.on('error', (err, client) => {
   console.error('Error:', err);

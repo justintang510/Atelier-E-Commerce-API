@@ -1,10 +1,10 @@
--- DELETE TABLES
+-- Drop tables
 -- DROP TABLE reviews CASCADE;
 -- DROP TABLE reviews_photos CASCADE;
 -- DROP TABLE characteristics CASCADE;
 -- DROP TABLE characteristic_reviews CASCADE;
 
--- CREATE TABLES
+-- Create tables
 CREATE TABLE IF NOT EXISTS reviews (
   id SERIAL PRIMARY KEY,
   product_id INTEGER NOT NULL DEFAULT NULL,
@@ -48,21 +48,21 @@ CREATE TABLE IF NOT EXISTS characteristic_reviews (
       REFERENCES reviews (id)
 );
 
--- DELETE INDEXES
+-- Drop indexes
 -- DROP INDEX index_product_id;
 -- DROP INDEX index_review_id;
--- DROP INDEX index_characteristic_id;
+-- DROP INDEX index_char_id;
 -- DROP INDEX index_char_review_id;
 -- DROP INDEX index_char_char_id;
 
--- CREATE INDEXES
+-- Create indexes
 CREATE INDEX index_product_id ON reviews(product_id);
 CREATE INDEX index_review_id ON reviews_photos(review_id);
 CREATE INDEX index_char_id ON characteristics(product_id);
 CREATE INDEX index_char_review_id ON characteristic_reviews(review_id);
 CREATE INDEX index_char_char_id ON characteristic_reviews(characteristic_id);
 
--- -- UPDATE SERIAL SEQUENCE
+-- Update serial sequences
 SELECT SETVAL(
     (SELECT PG_GET_SERIAL_SEQUENCE('reviews', 'id')),
     (SELECT (MAX("id") + 1) FROM "reviews"),
@@ -80,4 +80,4 @@ SELECT SETVAL(
     (SELECT (MAX("id") + 1) FROM "characteristic_reviews"),
     FALSE);
 
--- psql -h localhost -U postgres -d reviewsdb -f ../hackreactor/reviews-api/database/reviews-ratings/schema.sql
+-- psql -h localhost -U postgres -d reviewsdb -f ./reviews-api/database/reviews-ratings/schema.sql

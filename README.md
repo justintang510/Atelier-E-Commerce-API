@@ -13,18 +13,15 @@ A fully developed back-end application scaled to support thousands of requests p
 
 <h2>Technologies Used</h2>
 
-| Technology | Description |
-| ------------- | ------------- |
-| [Node.js](https://github.com/nodejs/node/)  | RESTful API  |
-| [PostgreSQL](https://github.com/postgres/postgres)  | Relational Database Management System  |
-| [NGINX](https://github.com/nginx/nginx) | Load Balancing and Reverse Proxy  |
-| [k6](https://github.com/grafana/k6)   | Load Testing (Local)  |
-| [Loader.io](https://loader.io/) | Load Testing (Cloud)  |
-| [ESLint](https://github.com/eslint/eslint) | Code Quality ([Airbnb Style Guide](https://github.com/airbnb/javascript)) |
+- [Node.js](https://github.com/nodejs/node/) - RESTful API
+- [PostgreSQL](https://github.com/postgres/postgres) - Relational Database
+- [NGINX](https://github.com/nginx/nginx) - Load Balancing
+- [k6](https://github.com/grafana/k6) - Load Testing (Local)
+- [Loader.io](https://loader.io/) - Load Testing (Cloud)
+- [ESLint](https://github.com/eslint/eslint) - Code Quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
 
-<h2>Performance Metrics (Local)</h2>
+<h2>Performance Metrics with k6 (Local)</h2>
 
-<h3>k6</h3>
 Objectives:
 <ul>
   <li>Reach 1000 requests per second</li>
@@ -40,9 +37,8 @@ Objectives:
 ![image](https://user-images.githubusercontent.com/97769405/166124355-3346d700-e82a-4e53-a038-0d5f8a2f0e5d.png)
 
 
-<h2>Performance Metrics (Cloud)</h2>
+<h2>Performance Metrics with Loader.io (Cloud)</h2>
 
-<h3>Loader.io</h3>
 Objectives:
 <ul>
   <li>Scale horizontally and limit test with the addition of new servers</li>

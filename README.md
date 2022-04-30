@@ -3,13 +3,14 @@ A fully developed back-end project scaled to support thousands of requests per s
 
 <h2>Technologies Used</h2>
 
-- [Node.js](https://github.com/nodejs/node/) - RESTful API
-- [PostgreSQL](https://github.com/postgres/postgres) - database
-- [NGINX](https://github.com/nginx/nginx) - load balancing
-- [k6](https://github.com/grafana/k6) - load testing (local)
-- [Loader.io](https://loader.io/) - load testing (cloud)
-- [ESLint](https://github.com/eslint/eslint) - code quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
-
+| Technology | Description |
+| ------------- | ------------- |
+| [Node.js](https://github.com/nodejs/node/)  | RESTful API  |
+| [PostgreSQL](https://github.com/postgres/postgres)  | Database  |
+| [NGINX](https://github.com/nginx/nginx) | Load Balancing  |
+| [k6](https://github.com/grafana/k6)   | Load Testing (Local)  |
+| [Loader.io](https://loader.io/) | Load Testing (Cloud)  |
+| [ESLint](https://github.com/eslint/eslint) | Code Quality ([Airbnb Style Guide](https://github.com/airbnb/javascript)) |
 
 <h2>Performance Metrics</h2>
 

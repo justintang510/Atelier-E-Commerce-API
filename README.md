@@ -7,8 +7,8 @@ A fully developed back-end application scaled to support thousands of requests p
 | ------------- | ------------- | ------------- | ------------- |
 | GET | /reviews | Retrieve reviews | product_id, page, count, sort |
 | GET | /reviews/meta | Retrieve review metadata | product_id | 
-| PUT | /reviews/:review_id/helpful | Mark a review as helpful | product_id | 
-| PUT | /reviews/:review_id/report | Mark a review as reported | product_id | 
+| PUT | /reviews/:review_id/helpful | Mark a review as helpful | review_id | 
+| PUT | /reviews/:review_id/report | Mark a review as reported | review_id | 
 | POST | /reviews | Save a review into the database | product_id, rating, date, summary, body, recommend, reviewer_name, reviewer_email | 
 
 <h2>Technologies Used</h2>

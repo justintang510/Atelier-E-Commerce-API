@@ -5,11 +5,11 @@ A fully developed back-end application scaled to support thousands of requests p
 
 | Method | Endpoint | Description | Parameters |
 | ------------- | ------------- | ------------- | ------------- |
-| GET | /reviews | Retrieve reviews | product_id, page, count, sort |
-| GET | /reviews/meta | Retrieve review metadata | product_id | 
-| PUT | /reviews/:review_id/helpful | Mark a review as helpful | review_id | 
-| PUT | /reviews/:review_id/report | Mark a review as reported | review_id | 
-| POST | /reviews | Save a review into the database | product_id, rating, date, summary, body, recommend, reviewer_name, reviewer_email | 
+| GET | /reviews | Retrieves reviews | product_id, page, count, sort |
+| GET | /reviews/meta | Retrieves review metadata | product_id | 
+| PUT | /reviews/:review_id/helpful | Marks a review as helpful | review_id | 
+| PUT | /reviews/:review_id/report | Marks a review as reported | review_id | 
+| POST | /reviews | Saves a review into the database | product_id, rating, date, summary, body, recommend, reviewer_name, reviewer_email | 
 
 <h2>Technologies Used</h2>
 

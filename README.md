@@ -1,7 +1,7 @@
 # Reviews & Ratings API
 A fully developed back-end project scaled to support thousands of requests per second, as well as over 30 million rows of data for the Reviews & Ratings section of an e-Commerce page.
 
-<h2>Tech Stack</h2>
+<h2>Technologies Used</h2>
 
 - [Node.js](https://github.com/nodejs/node/) - RESTful API
 - [PostgreSQL](https://github.com/postgres/postgres) - Database

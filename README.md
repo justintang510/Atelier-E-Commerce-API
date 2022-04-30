@@ -8,7 +8,7 @@ A fully developed back-end project scaled to support thousands of requests per s
 - [NGINX](https://github.com/nginx/nginx) - load balancing
 - [k6](https://github.com/grafana/k6) - load testing (local)
 - [Loader.io](https://loader.io/) - load lesting (cloud)
-- [ESLint](https://github.com/eslint/eslint) - code quality ([AirBNB Style Guide](https://github.com/airbnb/javascript))
+- [ESLint](https://github.com/eslint/eslint) - code quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
 
 
 <h2>Performance Metrics</h2>

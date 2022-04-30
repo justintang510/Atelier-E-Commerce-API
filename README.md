@@ -31,10 +31,12 @@ Goal:
   <li>Remain under 50ms response time</li>
 </ul>
 
-**/reviews** <br>
+<h3>Endpoint: /reviews</h3>
+
 ![image](https://user-images.githubusercontent.com/97769405/166124353-244cd936-74b7-4c96-b5c3-47d741fdafe4.png)
 
-**/reviews/meta** <br>
+<h3>Endpoint: /reviews/meta</h3>
+
 ![image](https://user-images.githubusercontent.com/97769405/166124355-3346d700-e82a-4e53-a038-0d5f8a2f0e5d.png)
 
 
@@ -47,11 +49,13 @@ Goal
   <li>Remain under 1% error rate</li>
 </ul>
 
-**/reviews** <br>
+<h3>Endpoint: /reviews</h3>
+
 ![image](https://user-images.githubusercontent.com/97769405/166124393-8b7ac7ab-adf2-4d19-b56b-1e7e1aee9198.png)
 
 
-**/reviews/meta** <br>
+<h3>Endpoint: /reviews/meta</h3>
+
 ![image](https://user-images.githubusercontent.com/97769405/166124385-329ce029-8aba-47f2-9efa-169d1b41be87.png)
 
 

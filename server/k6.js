@@ -6,7 +6,7 @@ export const options = {
       executor: 'constant-arrival-rate',
       rate: 2000,
       timeUnit: '1s',
-      duration: '60s',
+      duration: '30s',
       preAllocatedVUs: 100,
       maxVUs: 5000,
     },
@@ -20,5 +20,7 @@ export default function () {
 
   // http.put(`http://localhost:3000/reviews/${Math.floor(Math.random()*1000000)}/report`);
 
-  // http.get(`http://localhost:3000/reviews/meta?product_id=${Math.floor(Math.random()*100000)}`);
+  http.get(`http://localhost:3000/reviews/meta?product_id=${Math.floor(Math.random()*100000)}`);
 }
+
+// k6 run server/k6.js

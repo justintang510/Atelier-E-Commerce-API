@@ -7,7 +7,7 @@ A fully developed back-end project scaled to support thousands of requests per s
 - [PostgreSQL](https://github.com/postgres/postgres) - database
 - [NGINX](https://github.com/nginx/nginx) - load balancing
 - [k6](https://github.com/grafana/k6) - load testing (local)
-- [Loader.io](https://loader.io/) - load lesting (cloud)
+- [Loader.io](https://loader.io/) - load testing (cloud)
 - [ESLint](https://github.com/eslint/eslint) - code quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
 
 

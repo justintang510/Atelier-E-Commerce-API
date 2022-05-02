@@ -1,6 +1,26 @@
 # Reviews & Ratings API
 A fully developed back-end application scaled to support thousands of requests per second, as well as over 30 million rows of data for the Reviews & Ratings section of an e-Commerce page.
 
+<h2>Getting Started</h2>
+
+1. Fork and clone:
+```
+git clone https://github.com/Samosas-SDC/reviews-api.git
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. Configure your database settings in .env
+
+
+4. Start the server:
+```
+npm start
+```
+
 <h2>API Endpoints</h2>
 
 | Method | Endpoint | Description | Parameters |

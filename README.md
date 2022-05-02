@@ -40,7 +40,7 @@ npm start
 - [Loader.io](https://loader.io/) - Load Testing (Cloud)
 - [ESLint](https://github.com/eslint/eslint) - Code Quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
 
-<h2>Performance Metrics with k6 (Local)</h2>
+<h2>Performance Tests with k6 (Local)</h2>
 
 Objectives:
 <ul>
@@ -57,7 +57,7 @@ Objectives:
 ![image](https://user-images.githubusercontent.com/97769405/166124355-3346d700-e82a-4e53-a038-0d5f8a2f0e5d.png)
 
 
-<h2>Performance Metrics with Loader.io (Cloud)</h2>
+<h2>Performance Tests with Loader.io (Cloud)</h2>
 
 Objectives:
 <ul>

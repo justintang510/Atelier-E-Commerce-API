@@ -35,6 +35,7 @@ npm start
 
 - [Node.js](https://github.com/nodejs/node/) - RESTful API
 - [PostgreSQL](https://github.com/postgres/postgres) - Relational Database
+- [AWS](https://aws.amazon.com/) - EC2 Instances
 - [NGINX](https://github.com/nginx/nginx) - Load Balancing
 - [k6](https://github.com/grafana/k6) - Load Testing (Local)
 - [Loader.io](https://loader.io/) - Load Testing (Cloud)

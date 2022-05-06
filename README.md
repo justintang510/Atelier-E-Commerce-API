@@ -1,6 +1,16 @@
 # Reviews & Ratings API
 A fully developed back-end application scaled to support thousands of requests per second, as well as over 30 million rows of data for the Reviews & Ratings section of an e-Commerce page.
 
+<h2>Technologies Used</h2>
+
+- [Node.js](https://github.com/nodejs/node/) - RESTful API
+- [PostgreSQL](https://github.com/postgres/postgres) - Relational Database
+- [AWS](https://aws.amazon.com/) - EC2 Instances
+- [NGINX](https://github.com/nginx/nginx) - Load Balancing
+- [k6](https://github.com/grafana/k6) - Load Testing (Local)
+- [Loader.io](https://loader.io/) - Load Testing (Cloud)
+- [ESLint](https://github.com/eslint/eslint) - Code Quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
+
 <h2>Getting Started</h2>
 
 1. Fork and clone:
@@ -30,16 +40,6 @@ npm start
 | PUT | /reviews/:review_id/helpful | Marks a review as helpful | review_id | 
 | PUT | /reviews/:review_id/report | Marks a review as reported | review_id | 
 | POST | /reviews | Saves a review into the database | product_id, rating, summary, body, recommend, reviewer_name, reviewer_email | 
-
-<h2>Technologies Used</h2>
-
-- [Node.js](https://github.com/nodejs/node/) - RESTful API
-- [PostgreSQL](https://github.com/postgres/postgres) - Relational Database
-- [AWS](https://aws.amazon.com/) - EC2 Instances
-- [NGINX](https://github.com/nginx/nginx) - Load Balancing
-- [k6](https://github.com/grafana/k6) - Load Testing (Local)
-- [Loader.io](https://loader.io/) - Load Testing (Cloud)
-- [ESLint](https://github.com/eslint/eslint) - Code Quality ([Airbnb Style Guide](https://github.com/airbnb/javascript))
 
 <h2>Performance Tests with k6 (Local)</h2>
 

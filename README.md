@@ -33,7 +33,7 @@ npm start
 
 <h2>API Endpoints</h2>
 
-| Method | Endpoint | Description | Parameters |
+| Method | Endpoint | Description | Parameter/Body |
 | ------------- | ------------- | ------------- | ------------- |
 | GET | /reviews | Retrieves a product's reviews | product_id, page, count, sort|
 | GET | /reviews/meta | Retrieves a product's review metadata | product_id | 

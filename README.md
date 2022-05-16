@@ -33,13 +33,41 @@ npm start
 
 <h2>API Endpoints</h2>
 
-| Method | Endpoint | Description | Parameter/Body |
-| ------------- | ------------- | ------------- | ------------- |
-| GET | /reviews | Retrieves a product's reviews | product_id, page, count, sort|
-| GET | /reviews/meta | Retrieves a product's review metadata | product_id | 
-| PUT | /reviews/:review_id/helpful | Marks a review as helpful | review_id | 
-| PUT | /reviews/:review_id/report | Marks a review as reported | review_id | 
-| POST | /reviews | Saves a review into the database | product_id, rating, summary, body, recommend, reviewer_name, reviewer_email | 
+GET /reviews
+| Parameter | Type | Description |
+| ------------- | ------------- | ------------- |
+| product_id | integer | Specifies the product for which to retrieve reviews |
+| page | integer | Selects the page of results to return |
+| count | integer | Specifies how many results per page to return |
+| sort | text | Changes the sort order of reviews based on "newest", "helpful", or "relevant" |
+
+GET /reviews/meta
+| Parameter | Type | Description |
+| ------------- | ------------- | ------------- |
+| product_id | integer | Specifies the product for which to retrieve metadata |
+
+PUT /reviews/:review_id/helpful
+| Parameter | Type | Description |
+| ------------- | ------------- | ------------- |
+| review_id | integer | Specifies the review to mark as helpful |
+
+PUT /reviews/:review_id/report
+| Parameter | Type | Description |
+| ------------- | ------------- | ------------- |
+| review_id | integer | Specifies the review to mark as reported |
+
+POST /reviews
+| Parameter | Type | Description |
+| ------------- | ------------- | ------------- |
+| product_id	| integer | ID of the product to post the review for |
+| rating	| integer | Indicating the review rating (1-5) |
+| summary	| text | Summary text of the review |
+| body	| text | Full text of the review |
+| recommend	| boolean | Value indicating if the reviewer recommends the product |
+| name | text | Username of the reviewer |
+| email	| text |	Email address of the reviewer |
+| photos | [text] |	Array of image URLs |
+| characteristics	| object |	Object of keys representing characteristic_id and values representing their ratings { "14": 5, "15": 5 //...} |
 
 <h2>Local Performance Tests with k6</h2>
 

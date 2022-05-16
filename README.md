@@ -41,7 +41,7 @@ npm start
 | PUT | /reviews/:review_id/report | Marks a review as reported | review_id | 
 | POST | /reviews | Saves a review into the database | product_id, rating, summary, body, recommend, reviewer_name, reviewer_email | 
 
-<h2>Performance Tests with k6 (Local)</h2>
+<h2>Local Performance Tests with k6</h2>
 
 Objectives:
 <ul>
@@ -58,7 +58,7 @@ Objectives:
 ![image](https://user-images.githubusercontent.com/97769405/166124355-3346d700-e82a-4e53-a038-0d5f8a2f0e5d.png)
 
 
-<h2>Performance Tests with Loader.io (Cloud)</h2>
+<h2>Cloud Performance Tests with Loader.io</h2>
 
 Objectives:
 <ul>

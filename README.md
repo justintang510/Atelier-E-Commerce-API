@@ -33,7 +33,7 @@ npm start
 
 <h2>API Endpoints</h2>
 
-GET /reviews
+**GET /reviews**
 | Parameter | Type | Description |
 | ------------- | ------------- | ------------- |
 | product_id | integer | Specifies the product for which to retrieve reviews |
@@ -41,22 +41,99 @@ GET /reviews
 | count | integer | Specifies how many results per page to return |
 | sort | text | Changes the sort order of reviews based on "newest", "helpful", or "relevant" |
 
-GET /reviews/meta
+**Response**
+
+Status: 200 OK
+```
+{
+  "product": "40344",
+  "page": 1,
+  "count": 1,
+  "results": [
+    {
+      "review_id": 5,
+      "rating": 5,
+      "summary": "This product is amazing!!!",
+      "recommend": true,
+      "response": null,
+      "body": "OMG I cannot stress this enough. This product is amazing!",
+      "date": "2022-01-01T00:00:00.000Z",
+      "reviewer_name": "jtang",
+      "helpfulness": 5,
+      "photos": [{
+          "id": 1,
+          "url": "urlplaceholder/review_40344_photo_number_1.jpg"
+        },
+        {
+          "id": 2,
+          "url": "urlplaceholder/review_40344_photo_number_2.jpg"
+        },
+      ]
+  ]
+}
+```
+
+**GET /reviews/meta**
 | Parameter | Type | Description |
 | ------------- | ------------- | ------------- |
 | product_id | integer | Specifies the product for which to retrieve metadata |
 
-PUT /reviews/:review_id/helpful
+
+**Response**
+
+Status: 200 OK
+
+```
+{
+  "product_id": "40344",
+  "ratings": {
+    1: 3
+    2: 4,
+    3: 6,
+    4: 12,
+    5: 20,
+  },
+  "recommended": {
+    0: 5,
+    1: 22,
+  },
+  "characteristics": {
+    "Size": {
+      "id": 10,
+      "value": "4.0"
+    },
+    "Width": {
+      "id": 11,
+      "value": "3.5"
+    },
+    "Comfort": {
+      "id": 12,
+      "value": "4.0"
+    },
+}
+```
+
+
+**PUT /reviews/:review_id/helpful**
 | Parameter | Type | Description |
 | ------------- | ------------- | ------------- |
 | review_id | integer | Specifies the review to mark as helpful |
 
-PUT /reviews/:review_id/report
+**Response**
+
+Status: 204 NO CONTENT
+
+
+**PUT /reviews/:review_id/report**
 | Parameter | Type | Description |
 | ------------- | ------------- | ------------- |
 | review_id | integer | Specifies the review to mark as reported |
 
-POST /reviews
+**Response**
+
+Status: 204 NO CONTENT
+
+**POST /reviews**
 | Parameter | Type | Description |
 | ------------- | ------------- | ------------- |
 | product_id	| integer | ID of the product to post the review for |
@@ -68,6 +145,10 @@ POST /reviews
 | email	| text |	Email address of the reviewer |
 | photos | [text] |	Array of image URLs |
 | characteristics	| object |	Object of keys representing characteristic_id and values representing their ratings { "14": 5, "15": 5 //...} |
+
+**Response**
+
+Status: 201 CREATED
 
 <h2>Local Performance Tests with k6</h2>
 

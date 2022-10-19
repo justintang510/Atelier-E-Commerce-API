@@ -162,11 +162,6 @@ Objectives:
 
 ![image](https://user-images.githubusercontent.com/97769405/166124353-244cd936-74b7-4c96-b5c3-47d741fdafe4.png)
 
-<h3>Endpoint: /reviews/meta</h3>
-
-![image](https://user-images.githubusercontent.com/97769405/166124355-3346d700-e82a-4e53-a038-0d5f8a2f0e5d.png)
-
-
 <h2>Cloud Performance Tests with Loader.io</h2>
 
 Objectives:

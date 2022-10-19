@@ -180,9 +180,3 @@ Objectives:
 
 ![image](https://user-images.githubusercontent.com/97769405/166124393-8b7ac7ab-adf2-4d19-b56b-1e7e1aee9198.png)
 
-
-<h3>Endpoint: /reviews/meta</h3>
-
-![image](https://user-images.githubusercontent.com/97769405/166124385-329ce029-8aba-47f2-9efa-169d1b41be87.png)
-
-
